@@ -1,0 +1,40 @@
+/* styles/Breadcrumb.css */
+.breadcrumb {
+  margin: 50px 0;
+  font-family: "Arial", sans-serif;
+  padding-left: 16px;
+}
+
+.breadcrumb-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start; /* đảm bảo căn trái */
+  align-items: center;
+}
+
+.breadcrumb-item {
+  font-size: 16px;
+  color: #555;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #0056b3;
+}
+
+.breadcrumb-separator {
+  margin: 0 5px;
+  color: #888;
+}
+
+.breadcrumb-text {
+  color: #888;
+}

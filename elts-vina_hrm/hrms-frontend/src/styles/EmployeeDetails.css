@@ -1,0 +1,287 @@
+.employeedetail-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: Inter, sans-serif;
+  background-color: #e3edf9;
+  overflow-x: hidden;
+}
+
+.employeedetail-main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 59px 20px 20px 20px;
+  min-width: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.employeedetail-form-container {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.employeedetail-form-navigation {
+  width: 424px;
+  border-radius: 15px;
+  padding: 35px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+}
+
+.employeedetail-nav-item {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 17px;
+  padding: 25px 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #e3edf9;
+}
+.employeedetail-job-information {
+  min-height: 500px;
+}
+
+.employeedetail-nav-item.employeedetail-active {
+  font-weight: 700;
+  background-color: #d0e2ff;
+  color: #000;
+}
+
+.employeedetail-form-content {
+  flex: 1;
+  border-radius: 15px;
+  padding: 64px 42px;
+  background-color: #fff;
+  min-width: 0;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+}
+
+.employeedetail-form-title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 55px;
+}
+
+.employeedetail-form-row {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+.employeedetail-input-group {
+  flex: 1;
+}
+
+.employeedetail-input-label {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.employeedetail-input-field {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 15px;
+  padding: 20px 36px;
+  height: 68px;
+  background-color: #e3edf9;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.employeedetail-datepicker-wrapper {
+  width: 100%;
+}
+.error-message {
+  color: red;
+  font-size: 14px; /* tăng kích thước chữ */
+  margin-top: 2px;
+  font-weight: 500; /* đậm hơn nếu muốn nổi bật */
+}
+
+.employeedetail-datepicker-wrapper input {
+  /* Kế thừa luôn style input cho đồng nhất */
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 15px;
+  padding: 20px 36px;
+  height: 68px;
+  background-color: #e3edf9;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .employeedetail-page {
+    flex-direction: column;
+  }
+  .employeedetail-main-content {
+    padding: 20px;
+  }
+  .employeedetail-form-navigation {
+    width: 100%;
+  }
+  .employeedetail-form-container {
+    flex-direction: column;
+  }
+  .employeedetail-form-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .employeedetail-form-title {
+    font-size: 18px;
+  }
+  .employeedetail-form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.employeedetail-form-content .react-datepicker-wrapper {
+  width: 100% !important;
+  display: block;
+}
+.employeedetail-form-actions {
+  margin-top: 0px;
+  text-align: right;
+  padding-bottom: 24px;
+}
+
+.submit-button {
+  background-color: #0f62fe;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.ocr-frame {
+  width: 100%;
+  height: 180px;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.ocr-upload-button {
+  cursor: pointer;
+  text-align: center;
+  color: #555;
+}
+
+.ocr-upload-button i {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ocr-preview-container {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #eee;
+}
+
+.ocr-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.ocr-reupload {
+  background: white;
+  color: black;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #999;
+}
+
+.ocr-preview-container:hover .ocr-overlay,
+.ocr-frame:hover .ocr-overlay {
+  opacity: 1;
+}
+
+.submit-button:hover {
+  background-color: #0353e9;
+}
+.required-star {
+  color: red;
+  margin-left: 2px;
+}
+.disabled-input {
+  background-color: #f0f0f0; /* Xám nhẹ để phân biệt */
+  color: #888; /* Chữ xám nhạt */
+  cursor: not-allowed; /* Con trỏ thành dấu cấm */
+}
+/* Tăng chiều cao khung nhập */
+.react-quill {
+  height: 200px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+/* Tăng kích thước chữ bên trong editor */
+.react-quill .ql-editor {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+/* Tăng kích thước nút toolbar nếu cần */
+.react-quill .ql-toolbar button {
+  font-size: 16px;
+}
+.custom-upload-container {
+  margin-top: 8px;
+}
+
+.custom-upload-label {
+  display: block;
+  border: 1px dashed orange;
+  padding: 16px;
+  text-align: center;
+  border-radius: 6px;
+  color: #ff6600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-upload-label:hover {
+  background-color: #fff7ec;
+}

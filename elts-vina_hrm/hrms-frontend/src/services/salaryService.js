@@ -1,0 +1,54 @@
+import axiosClient from "./axiosClient";
+
+const salaryService = {
+  getMonthlySalaries: (
+    month,
+    year,
+    page = 0,
+    size = 10,
+    search = "",
+    departmentId = null,
+    positionId = null,
+    lineId = null
+  ) =>
+    axiosClient.get("/salaries", {
+      params: {
+        month,
+        year,
+        page,
+        size,
+        search,
+        departmentId,
+        positionId,
+        lineId,
+      },
+    }),
+
+  regenerateMonthlySalaries: (month, year) => {
+    return axiosClient.put("/salaries/regenerate", null, {
+      params: { month, year },
+    });
+  },
+
+  getAvailableSalaryMonths: () => {
+    return axiosClient.get("/salaries/available-months");
+  },
+  getEmpMonthlySalaries: (month, year) => {
+    return axiosClient.get("/salaries/employee-months", {
+      params: { month, year },
+    });
+  },
+  lockSalaryMonth: (month, year, locked) => {
+    return axiosClient.put("/salaries/lock", null, {
+      params: { month, year, locked },
+    });
+  },
+  exportMonthlySalaries: (month, year) => {
+    return axiosClient.get("/salaries/export", {
+      params: { month, year },
+      responseType: "blob",
+    });
+  },
+};
+
+export default salaryService;
